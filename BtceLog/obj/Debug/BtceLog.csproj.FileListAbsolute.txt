@@ -1,0 +1,8 @@
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\obj\Debug\BtceLog.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\BtceLog.dll.config
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\BtceLog.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\BtceLog.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\obj\Debug\BtceLog.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\obj\Debug\BtceLog.pdb

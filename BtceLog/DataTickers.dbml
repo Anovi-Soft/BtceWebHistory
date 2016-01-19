@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BtceTradeHistory" Class="DataTickersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=tradehistoryserver.database.windows.net;Initial Catalog=BtceTradeHistory;User ID=L0dom;Connect Timeout=60" SettingsObjectName="BtceLog.Properties.Settings" SettingsPropertyName="BtceTradeHistoryConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tickers" Member="Tickers">
+    <Type Name="Ticker">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TickerType" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="WritingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="BuyPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SellPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
