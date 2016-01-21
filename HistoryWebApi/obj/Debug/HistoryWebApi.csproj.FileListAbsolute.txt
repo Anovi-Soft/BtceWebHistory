@@ -26,3 +26,5 @@ C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\bin\System.Web.Htt
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\obj\Debug\HistoryWebApi.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\obj\Debug\HistoryWebApi.dll
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\obj\Debug\HistoryWebApi.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\bin\BtceLog.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\HistoryWebApi\bin\BtceLog.pdb

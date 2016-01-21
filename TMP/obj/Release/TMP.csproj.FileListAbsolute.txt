@@ -1,0 +1,10 @@
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\TMP.exe.config
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\TMP.exe
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\TMP.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\BtceLog.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\Newtonsoft.Json.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\BtceLog.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Release\Newtonsoft.Json.xml
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Release\TMP.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Release\TMP.exe
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Release\TMP.pdb

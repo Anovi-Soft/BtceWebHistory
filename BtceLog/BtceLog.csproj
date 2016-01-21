@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BtceLog.cs" />
+    <Compile Include="BtceLogger.cs" />
     <Compile Include="DataTickers.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

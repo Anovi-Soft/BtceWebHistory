@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BtceApi
 {
-    public enum TradeType
+    public enum TradeType:byte
     {
         BtcUsd,
         BtcRur,

@@ -82,7 +82,7 @@ namespace BtceLog
 		
 		private int _ID;
 		
-		private string _TickerType;
+		private byte _TickerType;
 		
 		private System.DateTime _WritingDate;
 		
@@ -98,7 +98,7 @@ namespace BtceLog
     partial void OnCreated();
     partial void OnIDChanging(int value);
     partial void OnIDChanged();
-    partial void OnTickerTypeChanging(string value);
+    partial void OnTickerTypeChanging(byte value);
     partial void OnTickerTypeChanged();
     partial void OnWritingDateChanging(System.DateTime value);
     partial void OnWritingDateChanged();
@@ -135,8 +135,8 @@ namespace BtceLog
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TickerType", DbType="NVarChar(7) NOT NULL", CanBeNull=false)]
-		public string TickerType
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TickerType", DbType="TinyInt NOT NULL")]
+		public byte TickerType
 		{
 			get
 			{
