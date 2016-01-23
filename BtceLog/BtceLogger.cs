@@ -7,8 +7,10 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AnoviHelpers;
 using BtceApi;
 using Newtonsoft.Json;
+
 
 namespace BtceLog
 {
@@ -16,6 +18,7 @@ namespace BtceLog
     {
         private static volatile BtceLogger instance;
         private static object syncRoot = new Object();
+        private Logger lLogger = Logger.Instance;
         private const string BtceUrl = "https://btc-e.com/api/2/";
         private Task currenTask;
         private const double epsilon = 0.00001;
@@ -55,15 +58,25 @@ namespace BtceLog
 
         private string Get(string url)
         {
-            WebRequest req = WebRequest.Create(url);
-            WebResponse resp = req.GetResponse();
-            Stream stream = resp.GetResponseStream();
-            string Out;
-            using (StreamReader sr = new StreamReader(stream))
+            lLogger.ALog(3, "Try Get");
+            try
             {
-                Out = sr.ReadToEnd();
+                //TODO Something wrong with get responce on ssl/tls connection
+                WebRequest req = WebRequest.Create(url);
+                WebResponse resp = req.GetResponse();
+                Stream stream = resp.GetResponseStream();
+                string Out;
+                using (StreamReader sr = new StreamReader(stream))
+                {
+                    Out = sr.ReadToEnd();
+                }
+                return Out;
             }
-            return Out;
+            catch (Exception e)
+            {
+                lLogger.ALog(2, e.Message, "Func:Get");
+                throw e;
+            }
         }
         
         private Ticker GetTicker(TradeType tradeType)
@@ -99,8 +112,18 @@ namespace BtceLog
             if (!tickers.Any()) return;
             if (EventTickerAdd != null)
                 tickers.ForEach(x=> EventTickerAdd(x));
-            db.Tickers.InsertAllOnSubmit(tickers);
-            db.SubmitChanges();
+
+            lLogger.ALog(3, "Try send result to db");
+            try
+            {
+                db.Tickers.InsertAllOnSubmit(tickers);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                lLogger.ALog(2, e.Message, "Func:Log");
+            }
+            lLogger.ALog(3, "Complete send result to db");
         }
 
         private async void ClearOld()
@@ -115,10 +138,9 @@ namespace BtceLog
         }
         private void WorkThread()
         {
-            //ClearOld();
+            lLogger.ALog(3, "WorkThread start work");
             var lastTickers = GetAllTickers();
             Log(lastTickers);
-            db.SubmitChanges();
             while (IsActive)
             {
                 var tickers = GetAllTickers();
@@ -134,6 +156,7 @@ namespace BtceLog
                 Log(newTickers);
                 lastTickers = tickers;
             }
+            lLogger.ALog(3, "WorkThread end work");
         }
 
         public static bool BaseTickerEqual(Ticker x, Ticker y)
@@ -145,7 +168,9 @@ namespace BtceLog
         }
         public Task LogIt()
         {
+            lLogger.ALog(3, "Try connect to data base");
             db = new DataTickersDataContext(connectionString);
+            lLogger.ALog(3, "Complete connect to data base");
             IsActive = true;
             return currenTask ?? (currenTask = Task.Factory.StartNew(WorkThread));
         }

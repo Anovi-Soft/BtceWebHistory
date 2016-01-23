@@ -6,3 +6,5 @@ C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\Newtonsoft.Jso
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\obj\Debug\BtceLog.dll
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\obj\Debug\BtceLog.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\AnoviHelpers.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\BtceLog\bin\Debug\AnoviHelpers.pdb

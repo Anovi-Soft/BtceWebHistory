@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BtceApi;
 using BtceLog;
+using AnoviHelpers;
 
 namespace TMP
 {
@@ -14,10 +15,14 @@ namespace TMP
         static BtceLogger logger = BtceLogger.Instance;
         static void Main(string[] args)
         {
+            var lLogger = Logger.Instance;
+            lLogger.Level = 10;
+            lLogger.ALog(0, "Hello, I`m start work");
             logger.EventTickerAdd += ticker => Task.Run(()=>
-                Console.WriteLine($"[{ticker.WritingDate:G}]\t[{((TradeType)ticker.TickerType).ToApiFormat()}]\tLast:{ticker.LastPrice}\tSell:{ticker.SellPrice}\tBuy:{ticker.BuyPrice}"));
+                Logger.ASLog(1,$"\t[{((TradeType)ticker.TickerType).ToApiFormat()}]\tLast:{ticker.LastPrice}\tSell:{ticker.SellPrice}\tBuy:{ticker.BuyPrice}","Ticker"));
             while (true)
             {
+                lLogger.ALog(0, "I`m listen you");
                 var readLine = Console.ReadLine();
                 if (readLine != null)
                 {
@@ -26,15 +31,22 @@ namespace TMP
                     {
                         case "start":
                             task = logger.LogIt();
+                            lLogger.ALog(0, "Ok. Log active");
                             break;
                         case "stop":
                             logger.Stop();
+                            lLogger.ALog(0, "Ok. Log deactive");
                             break;
                         case "status":
-                            Console.WriteLine(logger.IsActive ? "Log active" : "Log deactive");
+                            if (task.Exception != null)
+                            {
+                                lLogger.ALog(2, task.Exception.ToString(), "Exception");
+                                logger.Stop();
+                            }
+                            lLogger.ALog(0, logger.IsActive ? "Log active" : "Log deactive");
                             break;
                         default:
-                            Console.WriteLine("Wrong Input");
+                            lLogger.ALog(0, "Wrong Input");
                             break;
                     }
                 }

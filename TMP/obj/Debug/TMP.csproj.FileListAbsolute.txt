@@ -8,3 +8,5 @@ C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Debug\Newtonsoft.Json.xm
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Debug\TMP.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Debug\TMP.exe
 C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\obj\Debug\TMP.pdb
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Debug\AnoviHelpers.dll
+C:\Users\Andrew\Documents\GitHub\BtceWebHistory\TMP\bin\Debug\AnoviHelpers.pdb

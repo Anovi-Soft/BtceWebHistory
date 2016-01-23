@@ -1,0 +1,7 @@
+[24.01.2016 7:36:48]Hello, I`m start work
+[24.01.2016 7:36:48]I`m listen you
+[24.01.2016 7:36:58]Try connect to data base
+[24.01.2016 7:36:58]Complete connect to data base
+[24.01.2016 7:36:58]I`m listen you
+[24.01.2016 7:36:58]Ok. Log active
+[24.01.2016 7:36:58]WorkThread start work
